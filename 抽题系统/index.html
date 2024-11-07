@@ -48,7 +48,7 @@
             <div class="content">
               <!-- <h2>抽取结果</h2> -->
               <div>
-                <h2>请点击抽取题号</h2>
+                <h2 class="txt">请点击抽取题号</h2>
                 <p class="dqView"></p>
                 <h2 class="istopShow top-p" style="display: none;">上游工序</h2>
                 <p class="topView istopShow"  style="display: none;"></p>
@@ -93,7 +93,7 @@
             if(gxType==''){
               $(".working-procedure").addClass('layui-anim-upbit');
             }
-            $(".content h2").text('当前工序')
+            $(".content .txt").text('当前工序')
              //始终为初级的工序
             if(isGrade==0){
               if(!flat){
