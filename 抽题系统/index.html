@@ -84,12 +84,14 @@
           let questionNumber='';//生成的值
           let gxType='ylArr'; //对应数组的题号
           let isGrade=0;//等级0 为初级 1为中级
+          let audio=new Audio('./muck.mp3');
         //  let getRandom=[1,24];//后台题库数量
          let timer='';
          let flat=false;//避免重复点击
           
           // 点击抽奖
           $(".sampling-inspection").click(function(){
+            audio.play();
             if(gxType==''){
               $(".working-procedure").addClass('layui-anim-upbit');
             }
@@ -121,6 +123,7 @@
           })
           //停止抽检
           $(".sampling-stop").click(function(){
+            audio.pause();
             flat=false;
             clearInterval(timer);
             $(".sampling-inspection").text('开启');
